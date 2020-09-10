@@ -1,6 +1,5 @@
 # AI Reader for Blind
 <br>This ML based app can extract the text present in an image captured through camera in real time and subsequently converts it into an audio message.<br>
-**Hope you guys will like this app ! Show some ❤️ and star the repo to support the project !**
 
 # Features
 
@@ -13,6 +12,9 @@
   <img src="https://github.com/Karandeep98/Text-Recognition/blob/master/images/screenshot1.jpeg" width="220" height="460" />|
  <img align="right"  src="https://github.com/Karandeep98/Text-Recognition/blob/master/images/screenshot2.jpeg" width="220" height="460"  />
   </p>
+  
+## Found this project useful? 
+If you found this project useful, then please consider giving it a :star: on Github and sharing it with your friends via social media.
 
 ## Project Created & Maintained By
 
