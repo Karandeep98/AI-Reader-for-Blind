@@ -10,7 +10,6 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -33,5 +32,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:15.0.2'
     //firebase ML
     implementation 'com.google.firebase:firebase-ml-vision:15.0.0'
-
 }

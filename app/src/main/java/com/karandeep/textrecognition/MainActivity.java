@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,6 +22,7 @@ import com.google.firebase.ml.vision.text.FirebaseVisionText;
 import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
 
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button captureImagebtn,detectTextBtn;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     Bitmap imageBitmap;
+    TextToSpeech mToSpeech;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 dispatchTakePictureIntent();
                 textView.setText("");
+            }
+        });
+        mToSpeech=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status!=TextToSpeech.ERROR){
+                    mToSpeech.setLanguage(Locale.ENGLISH);
+                }
             }
         });
         detectTextBtn.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
             for(FirebaseVisionText.Block block: firebaseVisionText.getBlocks()){
                 String text = block.getText();
                 textView.setText(text);
+                mToSpeech.speak(text,TextToSpeech.QUEUE_FLUSH,null);
             }
         }
     }
