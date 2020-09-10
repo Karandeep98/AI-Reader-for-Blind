@@ -13,6 +13,7 @@
   <img src="https://github.com/Karandeep98/Text-Recognition/blob/master/images/screenshot1.jpeg" width="220" height="460" />|
  <img align="right"  src="https://github.com/Karandeep98/Text-Recognition/blob/master/images/screenshot2.jpeg" width="220" height="460"  />
   </p>
+
 ## Project Created & Maintained By
 
 ### Karandeep Singh
